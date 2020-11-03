@@ -8,7 +8,7 @@ public class SharedObject {
         return counter;
     }
 
-    public  void inc(){
+    public synchronized void inc(){
         counter++;
     }
     public synchronized void dec() {

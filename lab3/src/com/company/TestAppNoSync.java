@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestAppNoSync {
+/*public class TestAppNoSync {
 
     public static final int N = 10;
     public static final int M = 10;
@@ -48,4 +48,4 @@ public class TestAppNoSync {
 
         System.out.println("Result time: " + seconds + " seconds.");
     }
-}
+}*/

@@ -1,6 +1,9 @@
 package com.company;
 
-/*public class SyncTestApp {
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ReentrantLockTestApp {
     private static int counter;
 
     public static final int N = 1000;
@@ -31,10 +34,16 @@ package com.company;
         System.out.println("Result time: " + seconds + " seconds.");
     }
 
-    public static synchronized void inc(){
+    public static void inc(){
         counter++;
     }
-    public static synchronized void dec() {
+
+    public static void dec() {
+
+        Lock lock = new ReentrantLock();
+        lock.lock();
         counter--;
+        lock.unlock();
+
     }
-}*/
+}

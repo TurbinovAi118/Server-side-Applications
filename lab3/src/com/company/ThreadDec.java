@@ -2,19 +2,29 @@ package com.company;
 
 public class ThreadDec extends Thread{
 
-    public SharedObject sharedObject;
 
-    public ThreadDec(SharedObject sharedObject){
-        this.sharedObject = sharedObject;
-    }
-
-
+    //NoSync
+    //public SharedObject sharedObject;
+    //public ThreadDec(SharedObject sharedObject){
+    //   this.sharedObject = sharedObject;
+    //}
 
     @Override
     public void run() {
 
-        synchronized (this) {
-            sharedObject.dec();
+        //NoSync
+        //sharedObject.dec();
+
+        //Sync
+        //for (int i = 0; i < SyncTestApp.M; i++) {
+        //    SyncTestApp.dec();
+        //}
+
+        //ReentrantLock
+        for (int i = 0; i < ReentrantLockTestApp.M; i++) {
+
+            ReentrantLockTestApp.dec();
+
         }
 
     }
